@@ -1,26 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Navigation />
+  <!-- Page content here -->
+  <main class="bg-accent pt-20">
+    <router-view />
+  </main>
+  <Footer />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import { onMounted } from "vue";
+import AOS from "aos";
+import Footer from "./components/MainFooter.vue";
+import Navigation from "./components/MainNavigation.vue";
+onMounted(() => {
+  AOS.init({ once: false, mirror: true, duration: 800 });
+});
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

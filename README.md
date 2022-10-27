@@ -1,4 +1,4 @@
-# lc
+# Levant Center
 
 ## Project setup
 ```
