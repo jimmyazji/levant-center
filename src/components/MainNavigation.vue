@@ -35,13 +35,13 @@
     <div
       class="overflow-y-auto py-4 px-3 bg-base-100 border-r border-base-200 h-screen pt-24"
     >
-      <RouterLink to="/" @click="closeNav" class="flex items-center px-3 mb-5">
+      <a href="#" @click="closeNav" class="flex items-center px-3 mb-5">
         <img src="@/assets/images/logo.png" class="w-full" alt="Levant Center" />
-      </RouterLink>
+      </a>
       <ul class="space-y-2" @click="closeNav">
         <li>
-          <RouterLink
-            to="/"
+          <a
+            href="#"
             class="flex items-center p-2 text-base font-normal text-accent-focus rounded-lg hover:bg-base-200"
           >
             <svg
@@ -60,11 +60,11 @@
               />
             </svg>
             <span class="ml-3">Home</span>
-          </RouterLink>
+          </a>
         </li>
         <li>
-          <RouterLink
-            to="/about"
+          <a
+            href="#about-us"
             class="flex items-center p-2 text-base font-normal text-accent-focus rounded-lg hover:bg-base-200"
           >
             <svg
@@ -86,11 +86,11 @@
               <circle cx="61.4" cy="26" r="13.9" />
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">About Us</span>
-          </RouterLink>
+          </a>
         </li>
         <li>
-          <RouterLink
-            to="/contact"
+          <a
+            href="#contact-us"
             class="flex items-center p-2 text-base font-normal text-accent-focus rounded-lg hover:bg-base-200"
           >
             <svg
@@ -106,7 +106,7 @@
               />
             </svg>
             <span class="flex-1 ml-3 whitespace-nowrap">Contact Us</span>
-          </RouterLink>
+          </a>
         </li>
       </ul>
     </div>

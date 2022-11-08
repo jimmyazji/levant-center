@@ -19,12 +19,8 @@
       <span class="text-base-300">{{ member.position }}</span>
     </div>
     <div data-aos="flip-up">
-      <div
-        class="bg-base-100 p-8 border-accent-focus border group-odd:skew-x-2 md:group-odd:skew-x-6 md:group-even:-skew-x-6 group-even:-skew-x-2"
-      >
-        <p
-          class="group-odd:-skew-x-2 md:group-odd:-skew-x-6 md:group-even:skew-x-6 group-even:skew-x-2 text-base-content"
-        >
+      <div class="bg-base-100 p-8 border-accent-focus border">
+        <p class="text-base-content">
           {{ member.about }}
         </p>
       </div>
