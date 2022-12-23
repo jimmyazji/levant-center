@@ -1,31 +1,26 @@
 <template>
-  <div
-    @click="closeNav"
-    v-show="showNav"
-    class="fixed w-full h-full z-30 transition duration-500"
-    :class="{ 'bg-black bg-opacity-20': showNav }"
-  ></div>
-  <nav class="fixed top-0 left-0 z-50">
-    <div
-      @click="toggleNav"
-      class="flex justify-center items-center bg-accent py-3.5 pl-2.5 pr-4 mt-6 ml-6 rounded-xl cursor-pointer select-none"
-      :class="{ 'pr-5 pl-2 pt-4': !showNav }"
-    >
-      <div class="relative w-[22px] h-[17.3px] group">
-        <span
-          class="block bg-base-100 absolute h-0.5 w-full rounded-lg top-0 left-1.5 transition duration-300"
-          :class="{ 'rotate-45 origin-left': showNav }"
-        ></span>
-        <span
-          class="block bg-base-100 absolute h-0.5 w-full rounded-lg top-1.5 left-1.5 transition duration-300"
-          :class="{ 'opacity-0': showNav }"
-        ></span>
-        <span
-          class="block bg-base-100 absolute h-0.5 w-full rounded-lg top-3 left-1.5 transition duration-300"
-          :class="{ '-rotate-45 origin-left top-4': showNav }"
-        ></span>
-      </div>
+  <nav class="fixed top-0 left-0 z-50 w-full bg-base-100 shadow-sm">
+    <div class="hidden sm:flex py-6 max-w-6xl mx-auto justify-between">
+      <img class="w-52" src="@/assets/images/logo.png" alt="Levant Center" />
+      <ul class="flex justify-evenly items-center min-w-[50%]">
+        <li><a href="#about-us">
+          <span class="font-semibold p-4 border-2 border-transparent hover:border-accent rounded-lg">About us</span>
+        </a></li>
+        <li><a href="#our-work">
+          <span class="font-semibold p-4 border-2 border-transparent hover:border-accent rounded-lg">Our work</span>
+        </a></li>
+        <li><a href="#contact-us">
+          <span class="font-semibold p-4 border-2 border-transparent hover:border-accent rounded-lg">Contact us</span>
+        </a></li>
+      </ul>
     </div>
+    <div class="sm:hidden py-4">
+      <button class="hamburger hamburger--3dxy" :class="{ 'is-active' : showNav }" type="button" @click="toggleNav">
+        <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>  
   </nav>
   <aside
     :class="showNav ? '-translate-x-0' : '-translate-x-full'"
@@ -122,3 +117,120 @@ const closeNav = () => {
   showNav.value = false;
 };
 </script>
+<style scoped>
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #2886BF;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #2886BF;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+/*
+     * 3DXY
+     */
+.hamburger--3dxy .hamburger-box {
+  perspective: 80px;
+}
+
+.hamburger--3dxy .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburger--3dxy .hamburger-inner::before,
+.hamburger--3dxy .hamburger-inner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dxy.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg);
+}
+.hamburger--3dxy.is-active .hamburger-inner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--3dxy.is-active .hamburger-inner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/*
+     * 3DXY Reverse
+     */
+.hamburger--3dxy-r .hamburger-box {
+  perspective: 80px;
+}
+
+.hamburger--3dxy-r .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.hamburger--3dxy-r .hamburger-inner::before,
+.hamburger--3dxy-r .hamburger-inner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dxy-r.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg);
+}
+.hamburger--3dxy-r.is-active .hamburger-inner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--3dxy-r.is-active .hamburger-inner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+</style>

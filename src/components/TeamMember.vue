@@ -1,6 +1,6 @@
 <template>
   <div
-    class="sm:flex w-full sm:space-x-8 justify-center text-left items-center odd:pl-8 even:pr-8 group"
+    class="sm:flex w-full sm:space-x-8 space-y-4 sm:space-y-0 justify-center text-left items-center odd:pl-8 even:pr-8 group"
   >
     <div data-aos="zoom-in-right" class="block text-center">
       <div class="avatar">
@@ -15,8 +15,8 @@
           />
         </div>
       </div>
-      <h3 class="text-base-100 text-xl capitalize">{{ member.name }}</h3>
-      <span class="text-base-300">{{ member.position }}</span>
+      <h3 class="text-base-content text-xl capitalize">{{ member.name }}</h3>
+      <span class="text-secondary">{{ member.position }}</span>
     </div>
     <div data-aos="flip-up">
       <div class="bg-base-100 p-8 border-accent-focus border">

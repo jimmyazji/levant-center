@@ -1,84 +1,249 @@
 <template>
   <Navigation />
   <!-- Page content here -->
-  <main class="bg-accent pt-20">
-    <h1 data-aos="zoom-in-down" class="text-6xl text-center w-full text-base-100 py-12">
-      Levant Center
-    </h1>
+  <main class="pt-20">
     <section id="about-us">
-      <div class="w-full bg-base-100 overflow-x-hidden">
-        <section id="mission" class="max-w-7xl mx-2 md:mx-auto py-12 p-6">
-          <article class="py-12 md:flex justify-between">
-            <div>
-              <h5
-                data-aos="fade-down"
-                class="text-base-content flex-none text-2xl font-bold uppercase"
-              >
-                About us
-              </h5>
-              <h1
-                data-aos="fade-right"
-                class="text-5xl uppercase whitespace-nowrap text-accent font-semibold"
-              >
-                Our mission
-              </h1>
-            </div>
-            <p
-              data-aos="fade-up"
-              class="lg:max-w-3xl max-w-lg text-lg pt-12 md:pt-0 text-base-content"
+      <article class="py-12 overflow-x-hidden px-6">
+        <div class="md:flex justify-between max-w-6xl mx-2 md:mx-auto">
+          <div>
+            <h5
+              data-aos="fade-down"
+              class="text-secondary flex-none text-2xl font-bold uppercase"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eos
-              corporis itaque voluptates sed debitis repellat ducimus neque quo sequi
-              quis, perferendis doloribus quaerat, quas ratione deleniti voluptate odio ut
-              non dolore amet, molestiae hic possimus dolorum? Itaque, vitae voluptatem.
-            </p>
-          </article>
-        </section>
-      </div>
-
-      <div class="w-full bg-base-content overflow-x-hidden">
-        <section class="max-w-7xl mx-2 md:mx-auto py-12 p-6">
-          <article class="py-12 md:flex justify-between">
-            <h1
+              About us
+            </h5>
+            <h2
               data-aos="fade-right"
-              class="text-5xl uppercase whitespace-nowrap text-accent font-semibold"
+              class="text-4xl sm:text-5xl uppercase whitespace-nowrap text-accent font-semibold"
             >
               Our Vision
-            </h1>
-            <p
-              data-aos="fade-up"
-              class="lg:max-w-3xl max-w-lg text-lg pt-12 md:pt-0 text-base-100"
+            </h2>
+          </div>
+          <p
+            data-aos="fade-up"
+            class="lg:max-w-3xl max-w-lg text-lg pt-12 md:pt-0 text-base-content"
+          >
+            Our vision aims to create a positive change and implement impactful and
+            effective actions to help people to build a better future, through addressing
+            development challenges, and finding sustainable solutions for a better, more
+            equal and stable world and improving the quality of peoples' lives.
+          </p>
+        </div>
+      </article>
+      <article class="py-12 bg-zinc-200 overflow-x-hidden px-6">
+        <div class="md:flex justify-between flex-row-reverse max-w-6xl mx-2 md:mx-auto">
+          <h2
+            data-aos="fade-right"
+            class="text-4xl sm:text-5xl uppercase whitespace-nowrap text-accent font-semibold"
+          >
+            Our Mission
+          </h2>
+          <p data-aos="fade-up" class="lg:max-w-3xl max-w-lg text-lg pt-12 md:pt-0">
+            Our mission is to support our clients: governments, international
+            organizations, civil society, and private sectors to succeed in fragile and
+            complex conflict settings for transformative change from fragility, prolonged
+            crises and emergencies through recovery to development.
+          </p>
+        </div>
+      </article>
+      <article class="py-12 overflow-x-hidden px-6">
+        <div class="md:flex justify-between max-w-6xl mx-2 md:mx-auto">
+          <div>
+            <h2
+              data-aos="fade-right"
+              class="text-4xl sm:text-5xl uppercase whitespace-nowrap text-accent font-semibold"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eos
-              corporis itaque voluptates sed debitis repellat ducimus neque quo sequi
-              quis, perferendis doloribus quaerat, quas ratione deleniti voluptate odio ut
-              non dolore amet, molestiae hic possimus dolorum? Itaque, vitae voluptatem.
-            </p>
-          </article>
-        </section>
-      </div>
-
-      <div class="w-full overflow-x-hidden">
-        <section id="team" class="max-w-7xl mx-2 md:mx-auto py-12 p-6">
+              Our Values
+            </h2>
+          </div>
+          <p
+            data-aos="fade-up"
+            class="lg:max-w-3xl max-w-lg text-lg pt-12 md:pt-0 text-base-content"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae deserunt esse
+            quam nam, suscipit consequuntur hic alias ipsa rerum minus, earum nemo facere
+            sunt excepturi repudiandae obcaecati. Dolor optio corrupti, quo modi impedit
+            voluptates aut minus quas veniam illo asperiores!
+          </p>
+        </div>
+      </article>
+      <div class="overflow-x-hidden bg-zinc-200">
+        <section id="team" class="max-w-7xl mx-2 md:mx-auto py-12 px-6">
           <article class="space-y-12 py-12">
-            <h1
+            <h2
               data-aos="zoom-in-down"
-              class="text-5xl first-letter:uppercase text-center text-base-100 pb-12 font-semibold"
+              class="text-4xl sm:text-5xl uppercase text-center text-accent pb-12 font-semibold"
             >
-              meet our team!
-            </h1>
+              our team
+            </h2>
             <Member v-for="(member, index) in members" :key="index" :member="member" />
           </article>
         </section>
       </div>
     </section>
-    <section id="contact-us" class="py-12">
+    <section id="our-work">
+      <article class="py-12 overflow-x-hidden px-6">
+        <div class="md:flex flex-col space-y-4 justify-center max-w-6xl mx-2 md:mx-auto">
+          <div>
+            <h5
+              data-aos="fade-down"
+              class="text-secondary flex-none text-2xl font-bold uppercase"
+            >
+              Our Work
+            </h5>
+            <h2
+              data-aos="fade-right"
+              class="text-4xl sm:text-5xl uppercase whitespace-nowrap text-accent font-semibold"
+            >
+              Who We Are
+            </h2>
+          </div>
+          <p data-aos="fade-up" class="text-lg pt-12 md:pt-0 text-base-content">
+            Levant Center for Development and Early Recovery is a non-profit organization,
+            international consultancy and service provider working in conflict, post
+            conflict and fragile settings around the global. Founded in the United
+            Kingdom, and committed to contribute to the advancement of the global
+            development agenda and the achievement of the Sustainable Development Goals
+            (SDGs).
+            <br />
+            Our vision aims to create a positive change and implement impactful and
+            effective actions to help people to build a better future, through addressing
+            development challenges, and finding sustainable solutions for a better, more
+            equal and stable world and improving the quality of peoples' lives.<br />
+            Through our work, we support the international community to transform
+            conflict, stabilize a situation, reduce further setbacks and pave the way
+            towards an eventual recovery and development.<br />
+            Our local access at the community level in the countries we operate, supported
+            by our global perspectives guides us to deliver positive and sustainable
+            change.<br />
+            Our mission is to support our clients: governments, international
+            organizations, civil society, and private sectors to succeed in fragile and
+            complex conflict settings for transformative change from fragility, prolonged
+            crises and emergencies through recovery to development.<br />
+            We offer services across a range of thematic/sectoral areas and geographies
+            through a set of approached which enable us to customize our offer to best
+            meet our client needs with high standards of delivery.
+          </p>
+        </div>
+      </article>
+      <article class="py-12 overflow-x-hidden overflow-y-hidden px-6 bg-zinc-200">
+        <div class="md:flex flex-col space-y-4 max-w-6xl mx-2 md:mx-auto">
+          <h2
+            data-aos="fade-left"
+            class="text-4xl sm:text-5xl uppercase whitespace-nowrap text-accent font-semibold"
+          >
+            How We Work
+          </h2>
+          <p data-aos="fade-up" class="text-lg pt-12 md:pt-0 text-base-content">
+            The 2030 Agenda for Sustainable Development was launched by a UN Summit in New
+            York on 2015, and 17 Sustainable Development Goals (SDGs) have been adopted to
+            ending poverty in all its forms, save the planet and build a peaceful world
+            while “leaving no one behind”. The UN 2030 Agenda envisages “a world of
+            universal respect for human rights and human dignity, the rule of law,
+            justice, equality and non-discrimination” with emphasis on the empowerment of
+            women and of vulnerable groups such as children, young people, persons with
+            disabilities, older persons, refugees, internally displaced persons and
+            migrants.<br />
+            Despite of the great progress to advance the 2030 agenda and achieve the SDGs
+            in many areas, the planetary emergency, that the world has faced, threatens
+            the global development agenda and humans’ future on the planet. People
+            everywhere continue to face a complex mix of threats to lives, from poverty
+            and inequality to armed conflict, pandemics and climate change.<br />
+            Our strategy describes how we deliver tailored and innovative solutions to
+            enable our clients and partners to achieve their goals and contribute to
+            building a safer and more equitable world. We aim to provide support for
+            transformation and positive change, addressing root causes, towards a greater
+            impact through adopting a set of approaches and methodologies that capture
+            SDG- linked results, and implement sustainable solutions.<br />
+            LCDER as a knowledge-driven organization, we provide extensive expertise,
+            policy advice, context analysis and strategic planning; monitoring, evaluation
+            and learning services and results-based management to large complex projects,
+            as well as conducting research for evidence-based decision making. In
+            parallel, we have the capacity to deliver field programmes in the following
+            thematic area of focus:
+          </p>
+          <ol class="list-decimal list-inside pl-8 text-lg">
+            <li class="before:inline-block before:w-2">
+              <span data-aos="fade-right">Governance and Democracy</span>
+              <ol class="list-decimal list-inside pl-16">
+                <li
+                  class="before:inline-block before:w-2"
+                  data-aos="fade-right"
+                  data-aos-delay="400"
+                >
+                  Local Development and Decentralization
+                </li>
+                <li
+                  class="before:inline-block before:w-2"
+                  data-aos="fade-right"
+                  data-aos-delay="500"
+                >
+                  Civil Society and Community Engagement
+                </li>
+                <li
+                  class="before:inline-block before:w-2"
+                  data-aos="fade-right"
+                  data-aos-delay="600"
+                >
+                  Urban Development and Participatory Local Development Planning
+                </li>
+                <li
+                  class="before:inline-block before:w-2"
+                  data-aos="fade-right"
+                  data-aos-delay="700"
+                >
+                  Justice and Accountability
+                </li>
+              </ol>
+            </li>
+            <li
+              class="before:inline-block before:w-2"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
+              Economic Growth
+            </li>
+            <li
+              class="before:inline-block before:w-2"
+              data-aos="fade-right"
+              data-aos-delay="600"
+            >
+              Fragility and Violent Conflict
+            </li>
+            <li
+              class="before:inline-block before:w-2"
+              data-aos="fade-right"
+              data-aos-delay="800"
+            >
+              Humanitarian Assistance
+            </li>
+            <li
+              class="before:inline-block before:w-2"
+              data-aos="fade-right"
+              data-aos-delay="1000"
+            >
+              Gender Equality and Social Inclusion
+            </li>
+          </ol>
+          <p
+            data-aos="fade-up"
+            class="lg:max-w-4xl max-w-lg text-lg pt-12 md:pt-0 text-base-content"
+          >
+            We do this in partnership with our country offices and local partners in many
+            countries and our network of qualified experts to ensure a collective and
+            collaborative approach to produce integrated holistic solutions and innovative
+            outcomes for maximum value.
+          </p>
+        </div>
+      </article>
+    </section>
+    <section id="contact-us" class="py-12 bg-zinc-200">
       <div id="form" class="relative mx-auto max-w-4xl">
         <div data-aos="fade-up" class="shadow-lg bg-base-100 p-6">
           <form @submit.prevent class="sm:pl-96 space-y-6">
-            <h1 class="text-4xl whitespace-nowrap text-accent font-semibold pt-12">
+            <h2 class="text-4xl whitespace-nowrap text-accent font-semibold pt-12">
               Get in touch!
-            </h1>
+            </h2>
             <Input placeholder="Your name" type="text" class="block w-full" />
             <Input placeholder="Your email" type="email" class="block w-full" />
             <TextArea placeholder="Your message" class="block w-full" />
@@ -91,7 +256,7 @@
         </div>
         <div
           data-aos="fade-right"
-          class="shadow-lg border border-base-content border-opacity-40 bg-accent-focus sm:absolute z-20 top-12 -left-12 p-12 space-y-8 max-w-sm"
+          class="shadow-lg border border-base-content border-opacity-40 bg-accent-focus sm:absolute z-20 top-12 -left-12 p-12 space-y-8 sm:w-auto w-full sm:max-w-sm"
         >
           <h1 class="text-4xl whitespace-nowrap text-base-100 font-semibold">
             Contact Us
@@ -183,13 +348,6 @@ onMounted(() => {
 });
 const members = [
   {
-    name: "nasser youssef",
-    img: "",
-    position: "Co-Founder",
-    about:
-      "Economic and Business Consultant holds a degree in financial economics from the university of London, Member of Board of Directors of the Syrian International Business Association (SIBA). He is currently an economic advisor to the team of MOBADERRON. He worked in British banks and financial institutions for 12 years dealing particularly with the Syrian private sector before he started his own finance and investment consultancy business in 2008 . Nasser appears regularly on several news channels to comment on the financial market. He is a board member of the Syrian Arab Association in the UK, he also helped establish the Local Welcome, charity organization based in the UK, Furthermore, Nasser is a business advisor to several U.K. based corporates and the Treasurer and a board member of USSOM International.",
-  },
-  {
     name: "wisam sharif",
     img: "",
     position: "Co-Founder",
@@ -197,11 +355,11 @@ const members = [
       "Development Professional and Former UN Official with technical and managerial backgrounds in conflict/post-conflict areas in the Middle East Region (Syria, Iraq, Jordan and Lebanon) at both government level as well as with international organizations. A demonstrated history of 15 years of relevant experience in providing advisory to decision makers and programme/project management in the area of governance and peacebuilding, public policy and civil society with UN Agencies/UNDP, EU, EIB, KFW among others. Skilled in research, complex conflict management, and strong experience in local governance & decentralization, community engagement, youth and women empowerment. Well- equipped with a record of success in designing, planning and execution of innovative projects in very complicated environments. Worked as a National Coordinator of UN Humanitarian Response Plans (HRPs) in the areas of humanitarian and recovery assistance to conflict-affected people and set cooperation strategies with international and national stakeholders. Also, worked as a senior manager of wide range of development programmes and projects with many international organizations, INGOs and NGOs. Wissam is a civil engineer and hold a Master of Business Administration and preparing for PhD in international development and peacebuilding in conflict settings in London- UK.",
   },
   {
-    name: "amer mohamed",
-    img: "amer-mohammed.png",
-    position: "Expert",
+    name: "nasser youssef",
+    img: "",
+    position: "Co-Founder",
     about:
-      "Blending conflict and security studies with finance and economic studies, Amer has obtained a wealth of knowledge and analytical skills that enabled him to quickly progress in his MENA- and research-focused career. He holds a BSc. in economics, an MSc. in banking and finance, and an M.A. in conflict resolution and security studies, the last of which is from the University of Bradford in the United Kingdom. Since mid-2019, Amer worked as a Research Lead and Senior Researcher with Integrity Global in London where he led or contributed to dozens of USAID-funded research and thematic assessment reports. These deliverables covered a wide range of topics in different fields, including security, governance, local economies, and public health. Prior to joining Integrity, Amer worked as a MENA Analyst at a risk management consultancy in London where he provided intelligence-led political, economic, and security analysis for the countries of North Africa.",
+      "Economic and Business Consultant holds a degree in financial economics from the university of London, Member of Board of Directors of the Syrian International Business Association (SIBA). He is currently an economic advisor to the team of MOBADERRON. He worked in British banks and financial institutions for 12 years dealing particularly with the Syrian private sector before he started his own finance and investment consultancy business in 2008 . Nasser appears regularly on several news channels to comment on the financial market. He is a board member of the Syrian Arab Association in the UK, he also helped establish the Local Welcome, charity organization based in the UK, Furthermore, Nasser is a business advisor to several U.K. based corporates and the Treasurer and a board member of USSOM International.",
   },
   {
     name: "mohamad al-ashmar",
@@ -210,10 +368,12 @@ const members = [
     about:
       "Mohamad Al-Ashmar is a humanitarian professional in the international development sector and programmes, social science researcher, and analyst with over 10 years of experience working on topics related to development contexts and particularly the political economy of Arab states, civic spaces, forced displacement, diaspora, migration, security, and peace, and development issues in fragile and conflict-affected countries, including Syria, Iraq, Lebanon, and South Sudan. Currently, he works as a director of Research and MEAL Services at ICS Consulting and an International Relations PhD fellow and scholar at the Centre for Syrian Studies (CSS) of the University of St Andrews. He also worked as a Policy Leader Fellow at the European University Institute, School of Transnational Governance. He holds MSc in Economics Policy from the University of Reading, MA, and a BSc in Economics and Management from the University of Damascus.",
   },
+  {
+    name: "amer mohamed",
+    img: "amer-mohammed.png",
+    position: "Expert",
+    about:
+      "Blending conflict and security studies with finance and economic studies, Amer has obtained a wealth of knowledge and analytical skills that enabled him to quickly progress in his MENA- and research-focused career. He holds a BSc. in economics, an MSc. in banking and finance, and an M.A. in conflict resolution and security studies, the last of which is from the University of Bradford in the United Kingdom. Since mid-2019, Amer worked as a Research Lead and Senior Researcher with Integrity Global in London where he led or contributed to dozens of USAID-funded research and thematic assessment reports. These deliverables covered a wide range of topics in different fields, including security, governance, local economies, and public health. Prior to joining Integrity, Amer worked as a MENA Analyst at a risk management consultancy in London where he provided intelligence-led political, economic, and security analysis for the countries of North Africa.",
+  },
 ];
 </script>
-<style>
-* {
-  scroll-behavior: smooth;
-}
-</style>

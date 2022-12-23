@@ -1,8 +1,8 @@
 <template>
-  <footer class="footer p-10 bg-base-100 text-accent">
-    <div>
-      <img class="w-52" src="@/assets/images/logo.png" alt="Levant Center" />
-    </div>
+  <footer class="footer p-10 bg-accent text-base-100">
+    <h2 class="text-4xl">
+      Levant Center
+    </h2>
     <div>
       <span class="footer-title">Social</span>
       <div class="grid grid-flow-col gap-4">
